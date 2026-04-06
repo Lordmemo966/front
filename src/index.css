@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { direction: rtl; scroll-behavior: smooth; }
+  body {
+    @apply font-tajawal bg-cream text-wood-dark min-h-screen overflow-x-hidden;
+    background-image: repeating-linear-gradient(
+      92deg, transparent 0, transparent 6px,
+      rgba(90,45,10,.04) 6px, rgba(90,45,10,.04) 7px
+    );
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gradient-to-br from-gold to-gold-light
+           text-wood-dark font-bold px-7 py-3 rounded-lg shadow-lg
+           hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-white/20 text-cream
+           px-7 py-3 rounded-lg hover:bg-white/10 transition-all duration-200;
+  }
+  .btn-dark {
+    @apply inline-flex items-center gap-2 bg-wood-dark text-gold-light
+           font-semibold px-5 py-2 rounded-lg hover:bg-wood-mid transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full border border-cream-dark rounded-lg px-4 py-2.5
+           font-tajawal text-wood-dark bg-cream outline-none
+           focus:border-gold transition-colors duration-200;
+  }
+  .card {
+    @apply bg-white border border-cream-dark rounded-xl p-6
+           shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  .section-title {
+    @apply flex items-center gap-3 mb-8;
+  }
+  .section-title h2 {
+    @apply text-wood-mid font-bold tracking-widest text-lg whitespace-nowrap;
+  }
+  .title-line {
+    @apply flex-1 h-px bg-gradient-to-r from-transparent via-wood-warm to-transparent;
+  }
+  .nav-link {
+    @apply text-white/70 text-sm px-3 py-1.5 rounded-md border border-transparent
+           hover:text-gold-light hover:border-gold/30 hover:bg-gold/10 transition-all duration-150;
+  }
+  .nav-link.active {
+    @apply text-gold-light border-gold/30 bg-gold/10;
+  }
+}
