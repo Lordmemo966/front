@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import Logo from '../components/Logo';
-import Spinner from '../components/Spinner';
+import { useAuth } from '../../context/AuthContext';
+import Logo from '../../components/Logo';
+import Spinner from '../../components/Spinner';
 import toast from 'react-hot-toast';
 
 export default function LoginPage() {
